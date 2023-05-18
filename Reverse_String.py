@@ -1,0 +1,5 @@
+s = input()
+lst = s.split()
+lst.reverse()
+s1 = " ".join(lst)
+print(s1)
