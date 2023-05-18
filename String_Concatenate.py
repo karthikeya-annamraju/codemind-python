@@ -1,0 +1,6 @@
+s = input()
+r = input()
+lst = (s+r).split()
+new = list(lst[0]+lst[1])
+new.sort()
+print("".join(new))
