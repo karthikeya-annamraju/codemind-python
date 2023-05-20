@@ -1,21 +1,23 @@
-def is_prime(n):
+def Prime(n):
     for i in range(2, int(n**0.5)+1):
         if n%i == 0:
             return False
             break
-    return True
-
-def reverse(n):
+    else:
+        return True
+    
+def rev(n):
     rev = 0
-    while (n>0):
-        rev = rev*10 + (n%10)
+    while n != 0:
+        rev = (rev*10) + (n%10)
         n//=10
     return rev
 
 num = int(input())
-if is_prime(num) and is_prime(reverse(num)):
+numrev = rev(num)
+if Prime(num) and Prime(numrev):
     print("circular prime")
-elif is_prime(num):
+elif Prime(num) and Prime(numrev) == False:
     print("prime but not a circular prime")
-else:
+else :
     print("not prime")
